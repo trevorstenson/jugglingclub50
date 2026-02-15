@@ -309,7 +309,7 @@
 	/* ---- INFO CARDS ---- */
 	.info-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
 		gap: 1.5rem;
 		max-width: min(900px, 90vw);
 		margin: 0 auto 3rem;
@@ -326,9 +326,11 @@
 			box-shadow 200ms ease;
 	}
 
-	.info-card:hover {
-		transform: translateY(-2px);
-		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+	@media (hover: hover) {
+		.info-card:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+		}
 	}
 
 	.info-card-icon {
@@ -397,9 +399,11 @@
 	.schedule-item {
 		display: flex;
 		align-items: center;
+		flex-wrap: wrap;
 		padding: 1rem 1.5rem;
 		border-bottom: 1px solid var(--card-border);
 		text-align: left;
+		gap: 0.25rem 0;
 	}
 
 	.schedule-item:last-child {
@@ -412,11 +416,23 @@
 
 	.schedule-time {
 		flex-shrink: 0;
+		min-width: 90px;
 		width: 110px;
 		font-weight: 600;
 		font-size: 0.9rem;
 		color: var(--accent-primary);
 		letter-spacing: 0.02em;
+	}
+
+	@media (max-width: 400px) {
+		.schedule-item {
+			padding: 0.85rem 1rem;
+		}
+
+		.schedule-time {
+			width: auto;
+			min-width: 80px;
+		}
 	}
 
 	.schedule-desc {
