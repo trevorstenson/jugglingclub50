@@ -6,8 +6,17 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
-	<title>SpinJam Juggling Event</title>
-	<meta name="description" content="Join us for an exciting juggling event featuring amazing performers, workshops, and community fun!" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+		rel="stylesheet"
+	/>
+	<title>BJF: Boston Juggling and Flow</title>
+	<meta
+		name="description"
+		content="BJF: Boston Juggling and Flow — celebrating the MIT Juggling Club's 50th and Boston Spinjam's 20th anniversary. Free admission, April 4, 2026 at MIT."
+	/>
 </svelte:head>
 
 <style>
@@ -15,25 +24,33 @@
 		margin: 0;
 		padding: 0;
 		overflow-x: hidden;
-		background-color: var(--theme-color, #000);
+		background-color: var(--theme-color, #1f2329);
+		font-family: 'Inter', system-ui, -apple-system, sans-serif;
+		line-height: 1.6;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
 	}
 
 	:global(html) {
 		margin: 0;
 		padding: 0;
-		background-color: var(--theme-color, #000);
+		background-color: var(--theme-color, #1f2329);
+	}
+
+	:global(*) {
+		box-sizing: border-box;
 	}
 
 	:global([data-sveltekit-preload-data]) {
 		margin: 0;
 		padding: 0;
-		background-color: var(--theme-color, #000);
+		background-color: var(--theme-color, #1f2329);
 	}
 
 	:global([data-sveltekit-preload-data] > div) {
 		margin: 0;
 		padding: 0;
-		background-color: var(--theme-color, #000);
+		background-color: var(--theme-color, #1f2329);
 	}
 </style>
 
