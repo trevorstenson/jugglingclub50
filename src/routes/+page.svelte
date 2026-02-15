@@ -6,6 +6,7 @@
 </script>
 
 <div class="page-container">
+	<div class="sky-spacer" aria-hidden="true"></div>
 	<div
 		class="skyline-layer"
 		aria-hidden="true"
@@ -194,7 +195,7 @@
 		--card-border: #3a414c;
 		--text-strong: #f6f7fb;
 		--text-muted: #c8cdd6;
-		--skyline-height: clamp(260px, 40vw, 460px);
+		--skyline-height: clamp(260px, 40vw, 550px);
 	}
 
 	/* ---- PAGE CONTAINER ---- */
@@ -206,6 +207,19 @@
 		display: flex;
 		flex-direction: column;
 		background-color: var(--base-color);
+	}
+
+	/* ---- SKY SPACER ---- */
+	.sky-spacer {
+		width: 100%;
+		height: clamp(0px, 8vw, 120px);
+		background-color: #f4e6d7;
+	}
+
+	@media (max-width: 768px) {
+		.sky-spacer {
+			display: none;
+		}
 	}
 
 	/* ---- SKYLINE ---- */
@@ -223,8 +237,8 @@
 		background: var(--base-color);
 		-webkit-mask-image: var(--skyline-image);
 		mask-image: var(--skyline-image);
-		-webkit-mask-size: cover;
-		mask-size: cover;
+		-webkit-mask-size: 100% auto;
+		mask-size: 100% auto;
 		-webkit-mask-repeat: no-repeat;
 		mask-repeat: no-repeat;
 		-webkit-mask-position: center bottom;
