@@ -9,7 +9,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
 	<link
-		href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+		href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap"
 		rel="stylesheet"
 	/>
 	<title>BJF: Boston Juggling and Flow</title>
@@ -24,8 +24,8 @@
 		margin: 0;
 		padding: 0;
 		overflow-x: hidden;
-		background-color: var(--theme-color, #1f2329);
-		font-family: 'Inter', system-ui, -apple-system, sans-serif;
+		background-color: #1A3A5C;
+		font-family: 'Outfit', system-ui, -apple-system, sans-serif;
 		line-height: 1.6;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
@@ -34,7 +34,7 @@
 	:global(html) {
 		margin: 0;
 		padding: 0;
-		background-color: var(--theme-color, #1f2329);
+		background-color: #1A3A5C;
 	}
 
 	:global(*) {
@@ -44,13 +44,13 @@
 	:global([data-sveltekit-preload-data]) {
 		margin: 0;
 		padding: 0;
-		background-color: var(--theme-color, #1f2329);
+		background-color: #1A3A5C;
 	}
 
 	:global([data-sveltekit-preload-data] > div) {
 		margin: 0;
 		padding: 0;
-		background-color: var(--theme-color, #1f2329);
+		background-color: #1A3A5C;
 	}
 </style>
 

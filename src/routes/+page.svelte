@@ -1,107 +1,66 @@
 <script lang="ts">
-	import bostonSilhouette from '$lib/assets/boston_silhouette_transparent.png';
-
+	import bjfBanner from '$lib/assets/bjf_banner.png';
+	import oldLogo from '$lib/assets/old_blue.png';
 	const mapsUrl =
 		'https://www.google.com/maps/search/?api=1&query=142+Memorial+Drive+Cambridge+MA+02139';
 </script>
 
-<div class="page-container">
-	<div class="sky-spacer" aria-hidden="true"></div>
-	<div
-		class="skyline-layer"
-		aria-hidden="true"
-		style={`--skyline-image: url(${bostonSilhouette});`}
-	></div>
+<div class="page">
+	<div class="banner-wrap">
+		<img class="banner" src={bjfBanner} alt="Boston Juggling and Flow festival banner" />
+	</div>
 
-	<div class="content-section">
+	<main class="content">
 		<!-- HERO -->
 		<header class="hero">
-			<h1 class="event-name">BJF</h1>
-			<p class="event-subtitle">Boston Juggling and Flow</p>
-			<p class="event-tagline">Come to the BJF celebration festival!</p>
-			<p class="event-tagline">
-				The MIT Juggling Club will be <strong>50 years old</strong>, and<br />
-				The Boston Spinjam will be <strong>20 years old</strong>!
+			<h1 class="title">Boston Juggling & Flow</h1>
+			<p class="tagline">
+				Come to the BJF festival to celebrate the <strong>50th</strong> anniversary of
+				the MIT Juggling Club and the <strong>20th</strong> anniversary of Boston Spinjam!
 			</p>
-			<div class="hero-badges">
-				<span class="badge">Saturday, April 4, 2026</span>
-				<span class="badge">Free Admission</span>
+			<p class="tagline">
+				Join us for a full day of open juggling, workshops, games, and free food.
+				All skill levels welcome, whether you've never picked up a ball or you've been
+				juggling for years. Open to everyone, not just MIT.
+			</p>
+			<p class="cheer">Happy Birthday to the MIT Juggling Club!</p>
+			<div class="badges">
+				<span class="badge badge--date">Saturday, April 4, 2026</span>
+				<span class="badge badge--free">Free Admission</span>
 			</div>
 		</header>
 
-		<hr class="accent-rule" />
+		<div class="divider" aria-hidden="true">
+			<span class="ball ball--1"></span>
+			<span class="ball ball--2"></span>
+			<span class="ball ball--3"></span>
+		</div>
 
-		<!-- INFO CARDS -->
-		<section class="info-grid" aria-label="Event details">
-			<div class="info-card">
-				<div class="info-card-icon">
-					<svg
-						width="28"
-						height="28"
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="currentColor"
-						stroke-width="2"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-					>
-						<circle cx="12" cy="12" r="10" />
-						<polyline points="12 6 12 12 16 14" />
-					</svg>
-				</div>
-				<h2 class="info-card-label">When</h2>
-				<p class="info-card-text">
+		<!-- DETAILS -->
+		<section class="details" aria-label="Event details">
+			<div class="detail detail--when">
+				<h2>When</h2>
+				<p>
 					<strong>Saturday, April 4, 2026</strong><br />
 					9:30 AM to 10:30 PM<br />
-					No cost — completely free admission.
+					Completely free, no cost at all.
 				</p>
 			</div>
 
-			<div class="info-card">
-				<div class="info-card-icon">
-					<svg
-						width="28"
-						height="28"
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="currentColor"
-						stroke-width="2"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-					>
-						<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-						<circle cx="12" cy="10" r="3" />
-					</svg>
-				</div>
-				<h2 class="info-card-label">Where</h2>
-				<p class="info-card-text">
+			<div class="detail detail--where">
+				<h2>Where</h2>
+				<p>
 					Massachusetts Institute of Technology<br />
 					Morss Hall, Walker Building<br />
-					<a href={mapsUrl} target="_blank" rel="noopener noreferrer" class="address-link">
+					<a href={mapsUrl} target="_blank" rel="noopener noreferrer">
 						142 Memorial Drive, Cambridge, MA 02139
 					</a>
 				</p>
 			</div>
 
-			<div class="info-card">
-				<div class="info-card-icon">
-					<svg
-						width="28"
-						height="28"
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="currentColor"
-						stroke-width="2"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-					>
-						<path
-							d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8l-6.2 4.5 2.4-7.4L2 9.4h7.6z"
-						/>
-					</svg>
-				</div>
-				<h2 class="info-card-label">What</h2>
-				<p class="info-card-text">
+			<div class="detail detail--what">
+				<h2>What</h2>
+				<p>
 					A day of Juggling and Flow arts!<br />
 					Including games, informal workshops, and free treats.
 				</p>
@@ -109,53 +68,62 @@
 		</section>
 
 		<!-- SCHEDULE -->
-		<section class="schedule-section">
-			<h2 class="section-heading">Schedule</h2>
-			<p class="schedule-tbd-note">Full schedule coming soon — check back for updates!</p>
-			<div class="schedule-timeline">
-				<div class="schedule-item">
-					<span class="schedule-time">9:30 AM</span>
-					<span class="schedule-desc">Doors Open</span>
+		<section class="schedule">
+			<h2 class="section-title">Schedule</h2>
+			<p class="schedule-note">Full schedule coming soon. Check back for updates!</p>
+			<div class="timeline">
+				<div class="tl-item">
+					<span class="tl-time">9:30 AM</span>
+					<span class="tl-desc">Doors Open</span>
 				</div>
-				<div class="schedule-item tbd">
-					<span class="schedule-time">10:00 AM</span>
-					<span class="schedule-desc">Workshops & Open Juggling <span class="tbd-badge">TBD</span></span>
+				<div class="tl-item tl-item--tbd">
+					<span class="tl-time">10:00 AM</span>
+					<span class="tl-desc">Workshops & Open Juggling/Flow <span class="tbd">TBD</span></span>
 				</div>
-				<div class="schedule-item tbd">
-					<span class="schedule-time">Afternoon</span>
-					<span class="schedule-desc">Games & Activities <span class="tbd-badge">TBD</span></span>
+				<div class="tl-item tl-item--tbd">
+					<span class="tl-time">Afternoon</span>
+					<span class="tl-desc">Games & Activities <span class="tbd">TBD</span></span>
 				</div>
-				<div class="schedule-item tbd">
-					<span class="schedule-time">Evening</span>
-					<span class="schedule-desc">Open Flow & Social <span class="tbd-badge">TBD</span></span>
+				<div class="tl-item tl-item--tbd">
+					<span class="tl-time">Evening</span>
+					<span class="tl-desc">Open Flow & Social <span class="tbd">TBD</span></span>
 				</div>
-				<div class="schedule-item">
-					<span class="schedule-time">10:30 PM</span>
-					<span class="schedule-desc">Event Ends</span>
+				<div class="tl-item">
+					<span class="tl-time">10:30 PM</span>
+					<span class="tl-desc">Event Ends</span>
 				</div>
 			</div>
 		</section>
 
-		<!-- STORY -->
-		<section class="story-section">
-			<h2 class="section-heading">Why</h2>
+		<!-- HISTORY -->
+		<section class="history">
+			<h2 class="section-title">A Bit of History</h2>
+			<img class="old-logo" src={oldLogo} alt="Original MIT Juggling Club logo, circa 1980s" />
 			<p>
-				The MIT Juggling Club was started <strong class="accent-number">50</strong> years ago
-				by Arthur Lewbel in 1976. It's now the oldest juggling club in continuous operation in
-				the entire world!
+				The MIT Juggling Club was founded in March 1975 by Arthur Lewbel, then an
+				undergraduate, who merged his juggling group with Andy Rubel's unicycle club.
+				It's been meeting weekly ever since, making it one of the longest continuously
+				running public juggling clubs in the country.
 			</p>
 			<p>
-				Plus, the Boston Spinjam is <strong class="accent-number">20</strong> years old!
+				Over the decades the club attracted some remarkable visitors, including Claude
+				Shannon, who developed the first mathematical theorem of juggling, and
+				legendary high-speed photographer Doc Edgerton, who invited jugglers to his
+				studio at MIT.
 			</p>
-			<p class="celebration">Happy Birthday to Boston Juggling and Flow!</p>
+			<p>
+				Fifty years later, the club is still going strong. As Lewbel puts it,
+				"you don't need dues. You don't need members. You just need to meet at the same
+				place and time every week."
+			</p>
 		</section>
 
 		<!-- NOTE -->
-		<aside class="note-callout">
-			<div class="note-icon">
+		<aside class="callout">
+			<div class="callout-icon">
 				<svg
-					width="24"
-					height="24"
+					width="22"
+					height="22"
 					viewBox="0 0 24 24"
 					fill="none"
 					stroke="currentColor"
@@ -168,7 +136,7 @@
 					<line x1="12" y1="8" x2="12.01" y2="8" />
 				</svg>
 			</div>
-			<div class="note-text">
+			<div>
 				<strong>Getting There</strong>
 				<p>
 					Parking is expensive and hard to find. Taking public transportation is
@@ -178,381 +146,477 @@
 		</aside>
 
 		<!-- FOOTER -->
-		<footer class="site-footer">
-			<hr class="accent-rule" />
+		<footer class="footer">
 			<p>MIT Juggling Club &middot; Boston Spinjam</p>
 		</footer>
-	</div>
+	</main>
 </div>
 
 <style>
+	@font-face {
+		font-family: 'Armstrong';
+		src: url('../lib/assets/armstrong_3/Armstrong-Extrabold.otf') format('opentype');
+		font-weight: 800;
+		font-style: normal;
+		font-display: swap;
+	}
+
 	:global(:root) {
-		--sky-color: linear-gradient(180deg, #f4e6d7 0%, #e5eef5 100%);
-		--base-color: #1f2329;
-		--accent-primary: #a31f34;
-		--accent-muted: #8a8b8c;
-		--card-bg: #2a2f38;
-		--card-border: #3a414c;
-		--text-strong: #f6f7fb;
-		--text-muted: #c8cdd6;
-		--skyline-height: clamp(260px, 40vw, 550px);
+		--onyx: #0c090d;
+		--frosted-blue: #b5f0ff;
+		--tomato: #f15946;
+		--tuscan-sun: #f9c22e;
+		--pacific-blue: #53b3cb;
+		--navy: #1a3a5c;
+		--surface: rgba(181, 240, 255, 0.07);
+		--surface-border: rgba(181, 240, 255, 0.12);
+		--text-primary: rgba(181, 240, 255, 0.92);
+		--text-muted: rgba(181, 240, 255, 0.72);
+		--text-strong: #b5f0ff;
 	}
 
-	/* ---- PAGE CONTAINER ---- */
-	.page-container {
-		width: 100%;
-		min-height: 100vh;
-		margin: 0;
-		padding: 0;
-		display: flex;
-		flex-direction: column;
-		background-color: var(--base-color);
-	}
-
-	/* ---- SKY SPACER ---- */
-	.sky-spacer {
-		width: 100%;
-		height: clamp(0px, 8vw, 120px);
-		background-color: #f4e6d7;
-	}
-
-	@media (max-width: 768px) {
-		.sky-spacer {
-			display: none;
+	/* ---- ANIMATIONS ---- */
+	@keyframes fadeUp {
+		from {
+			opacity: 0;
+			transform: translateY(16px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
 		}
 	}
 
-	/* ---- SKYLINE ---- */
-	.skyline-layer {
+	@media (prefers-reduced-motion: reduce) {
+		:global(*) {
+			animation-duration: 0s !important;
+			animation-delay: 0s !important;
+		}
+	}
+
+	/* ---- PAGE ---- */
+	.page {
+		width: 100%;
+		min-height: 100vh;
+		background: var(--navy);
+		color: var(--text-primary);
+	}
+
+	/* ---- BANNER ---- */
+	.banner-wrap {
 		position: relative;
 		width: 100%;
-		height: var(--skyline-height);
-		background: var(--sky-color);
+		overflow: hidden;
 	}
 
-	.skyline-layer::after {
+	.banner-wrap::after {
 		content: '';
 		position: absolute;
-		inset: 0;
-		background: var(--base-color);
-		-webkit-mask-image: var(--skyline-image);
-		mask-image: var(--skyline-image);
-		-webkit-mask-size: 100% auto;
-		mask-size: 100% auto;
-		-webkit-mask-repeat: no-repeat;
-		mask-repeat: no-repeat;
-		-webkit-mask-position: center bottom;
-		mask-position: center bottom;
+		bottom: -40px;
+		left: 0;
+		right: 0;
+		height: 40px;
+		background: linear-gradient(to bottom, rgba(26, 58, 92, 0.6) 0%, var(--navy) 100%);
+		pointer-events: none;
+		z-index: 1;
 	}
 
-	/* ---- CONTENT SECTION ---- */
-	.content-section {
-		background-color: var(--base-color);
-		color: var(--text-strong);
+	.banner {
 		width: 100%;
-		padding: 1.5rem clamp(1rem, 4vw, 2rem) 2rem;
-		margin: 0;
-		flex: 1;
+		height: auto;
+		display: block;
+	}
+
+	/* ---- CONTENT ---- */
+	.content {
+		max-width: 820px;
+		margin: 0 auto;
+		padding: 0 clamp(1.25rem, 5vw, 2.5rem) 2rem;
 	}
 
 	/* ---- HERO ---- */
 	.hero {
 		text-align: center;
-		padding: 0.5rem 0 2rem;
-		max-width: min(900px, 90vw);
-		margin: 0 auto;
+		padding: 0.5rem 0 0.5rem;
 	}
 
-	.event-name {
-		font-size: clamp(2.5rem, 6vw, 4rem);
-		font-weight: 800;
-		letter-spacing: 0.15em;
-		text-transform: uppercase;
-		color: var(--text-strong);
-		margin: 0 0 0.25rem;
-	}
-
-	.event-subtitle {
-		font-size: clamp(1rem, 2.5vw, 1.4rem);
+	.title {
+		font-family: 'Armstrong', sans-serif;
+		font-size: clamp(1.8rem, 5vw, 3rem);
 		font-weight: 400;
-		letter-spacing: 0.15em;
-		text-transform: uppercase;
-		color: var(--text-muted);
-		margin: 0 0 1.25rem;
+		letter-spacing: 0.08em;
+		color: var(--tuscan-sun);
+		margin: 0 0 0.25rem;
+		text-shadow: 0 0 60px rgba(249, 194, 46, 0.2);
+		animation: fadeUp 0.6s ease-out both;
 	}
 
-	.event-tagline {
-		font-size: clamp(0.95rem, 2vw, 1.1rem);
+	.tagline {
+		font-size: clamp(1.05rem, 2.2vw, 1.15rem);
 		color: var(--text-muted);
 		margin: 0.4rem 0;
-		line-height: 1.6;
+		line-height: 1.7;
+		animation: fadeUp 0.6s ease-out 0.12s both;
 	}
 
-	.event-tagline strong {
-		color: var(--text-strong);
+	.tagline strong {
+		color: var(--tomato);
+		font-weight: 700;
 	}
 
-	.hero-badges {
+	.cheer {
+		color: var(--tuscan-sun);
+		font-weight: 700;
+		font-size: 1.15rem;
+		margin: 1.25rem 0 0.25rem;
+		animation: fadeUp 0.6s ease-out 0.16s both;
+	}
+
+	.badges {
 		display: flex;
 		justify-content: center;
-		gap: 1rem;
+		gap: 0.75rem;
 		flex-wrap: wrap;
-		margin-top: 1.5rem;
+		margin-top: 1.75rem;
+		animation: fadeUp 0.6s ease-out 0.2s both;
 	}
 
 	.badge {
 		display: inline-block;
-		padding: 0.5rem 1.25rem;
+		padding: 0.55rem 1.3rem;
 		border-radius: 100px;
-		background: rgba(163, 31, 52, 0.15);
-		color: var(--accent-primary);
-		font-weight: 600;
-		font-size: 0.9rem;
-		letter-spacing: 0.03em;
+		font-weight: 700;
+		font-size: 0.95rem;
+		letter-spacing: 0.04em;
+		transition: box-shadow 200ms ease, background 200ms ease;
 	}
 
-	/* ---- ACCENT RULE ---- */
-	.accent-rule {
-		border: none;
-		width: 60px;
-		height: 2px;
-		background: var(--accent-primary);
-		margin: 2rem auto;
+	.badge--date {
+		background: var(--tuscan-sun);
+		color: var(--onyx);
 	}
 
-	/* ---- INFO CARDS ---- */
-	.info-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
-		gap: 1.5rem;
-		max-width: min(900px, 90vw);
-		margin: 0 auto 3rem;
-	}
-
-	.info-card {
-		background: var(--card-bg);
-		border: 1px solid var(--card-border);
-		border-top: 3px solid var(--accent-primary);
-		border-radius: 8px;
-		padding: 1.5rem;
-		transition:
-			transform 200ms ease,
-			box-shadow 200ms ease;
+	.badge--free {
+		background: transparent;
+		border: 2px solid var(--tomato);
+		color: var(--tomato);
 	}
 
 	@media (hover: hover) {
-		.info-card:hover {
-			transform: translateY(-2px);
-			box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+		.badge--date:hover {
+			box-shadow: 0 0 24px rgba(249, 194, 46, 0.3);
+		}
+
+		.badge--free:hover {
+			background: rgba(241, 89, 70, 0.1);
 		}
 	}
 
-	.info-card-icon {
-		width: 28px;
-		height: 28px;
-		margin-bottom: 0.75rem;
-		color: var(--accent-primary);
+	/* ---- DIVIDER (juggling balls) ---- */
+	.divider {
+		display: flex;
+		justify-content: center;
+		gap: 0.65rem;
+		padding: 2rem 0;
 	}
 
-	.info-card-label {
-		font-size: 0.85rem;
-		font-weight: 700;
+	.ball {
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+	}
+
+	.ball--1 {
+		background: var(--tomato);
+	}
+
+	.ball--2 {
+		background: var(--tuscan-sun);
+	}
+
+	.ball--3 {
+		background: var(--pacific-blue);
+	}
+
+	/* ---- DETAILS GRID ---- */
+	.details {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+		gap: 1.25rem;
+		margin-bottom: 3rem;
+	}
+
+	.detail {
+		background: var(--surface);
+		border: 1px solid var(--surface-border);
+		border-radius: 10px;
+		padding: 1.5rem;
+		border-top: 3px solid;
+		transition:
+			transform 200ms ease,
+			box-shadow 200ms ease;
+		animation: fadeUp 0.5s ease-out both;
+	}
+
+	.detail:nth-child(1) {
+		animation-delay: 0.15s;
+	}
+
+	.detail:nth-child(2) {
+		animation-delay: 0.25s;
+	}
+
+	.detail:nth-child(3) {
+		animation-delay: 0.35s;
+	}
+
+	.detail--when {
+		border-top-color: var(--tuscan-sun);
+	}
+
+	.detail--where {
+		border-top-color: var(--pacific-blue);
+	}
+
+	.detail--what {
+		border-top-color: var(--tomato);
+	}
+
+	@media (hover: hover) {
+		.detail:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 8px 30px rgba(181, 240, 255, 0.06);
+		}
+	}
+
+	.detail h2 {
+		font-family: 'Armstrong', sans-serif;
+		font-size: 1rem;
+		font-weight: 400;
 		text-transform: uppercase;
-		letter-spacing: 0.1em;
-		color: var(--accent-primary);
+		letter-spacing: 0.15em;
 		margin: 0 0 0.75rem;
 	}
 
-	.info-card-text {
-		font-size: 1rem;
+	.detail--when h2 {
+		color: var(--tuscan-sun);
+	}
+
+	.detail--where h2 {
+		color: var(--pacific-blue);
+	}
+
+	.detail--what h2 {
+		color: var(--tomato);
+	}
+
+	.detail p {
+		font-size: 1.05rem;
 		color: var(--text-muted);
-		line-height: 1.6;
+		line-height: 1.65;
 		margin: 0;
 	}
 
-	.info-card-text strong {
+	.detail p strong {
 		color: var(--text-strong);
 	}
 
-	.address-link {
-		color: var(--text-muted);
+	.detail a {
+		color: var(--pacific-blue);
 		text-decoration: underline;
 		text-underline-offset: 3px;
-		text-decoration-color: var(--card-border);
+		text-decoration-color: rgba(83, 179, 203, 0.4);
 		transition:
 			color 200ms ease,
 			text-decoration-color 200ms ease;
 	}
 
-	.address-link:hover {
-		color: var(--accent-primary);
-		text-decoration-color: var(--accent-primary);
+	.detail a:hover {
+		color: var(--frosted-blue);
+		text-decoration-color: var(--frosted-blue);
 	}
 
-	/* ---- SCHEDULE SECTION ---- */
-	.schedule-section {
-		max-width: min(700px, 85vw);
-		margin: 0 auto 3rem;
+	/* ---- SECTION TITLE ---- */
+	.section-title {
+		font-family: 'Armstrong', sans-serif;
+		font-size: 1.6rem;
+		font-weight: 400;
+		color: var(--frosted-blue);
+		text-transform: uppercase;
+		letter-spacing: 0.12em;
 		text-align: center;
+		margin: 0 0 0.75rem;
 	}
 
-	.schedule-tbd-note {
-		color: var(--accent-muted);
-		font-size: 0.95rem;
+	/* ---- SCHEDULE ---- */
+	.schedule {
+		margin-bottom: 3rem;
+	}
+
+	.schedule-note {
+		text-align: center;
+		color: var(--text-muted);
+		font-size: 1rem;
 		font-style: italic;
 		margin: 0 0 1.5rem;
 	}
 
-	.schedule-timeline {
-		background: var(--card-bg);
-		border: 1px solid var(--card-border);
-		border-radius: 8px;
+	.timeline {
+		background: var(--surface);
+		border: 1px solid var(--surface-border);
+		border-radius: 10px;
 		overflow: hidden;
 	}
 
-	.schedule-item {
+	.tl-item {
 		display: flex;
 		align-items: center;
-		flex-wrap: wrap;
-		padding: 1rem 1.5rem;
-		border-bottom: 1px solid var(--card-border);
-		text-align: left;
-		gap: 0.25rem 0;
+		padding: 0.9rem 1.5rem;
+		border-bottom: 1px solid var(--surface-border);
 	}
 
-	.schedule-item:last-child {
+	.tl-item:last-child {
 		border-bottom: none;
 	}
 
-	.schedule-item.tbd {
-		opacity: 0.6;
+	.tl-item--tbd {
+		opacity: 0.5;
 	}
 
-	.schedule-time {
+	.tl-time {
 		flex-shrink: 0;
-		min-width: 90px;
 		width: 110px;
-		font-weight: 600;
-		font-size: 0.9rem;
-		color: var(--accent-primary);
+		font-weight: 700;
+		font-size: 0.95rem;
+		color: var(--tuscan-sun);
 		letter-spacing: 0.02em;
 	}
 
-	@media (max-width: 400px) {
-		.schedule-item {
-			padding: 0.85rem 1rem;
-		}
-
-		.schedule-time {
-			width: auto;
-			min-width: 80px;
-		}
-	}
-
-	.schedule-desc {
-		color: var(--text-muted);
-		font-size: 1rem;
+	.tl-desc {
+		color: var(--text-primary);
+		font-size: 1.05rem;
 		display: flex;
 		align-items: center;
-		gap: 0.6rem;
+		gap: 0.5rem;
 		flex-wrap: wrap;
 	}
 
-	.schedule-item:not(.tbd) .schedule-desc {
-		color: var(--text-strong);
+	.tl-item--tbd .tl-desc {
+		color: var(--text-muted);
 	}
 
-	.tbd-badge {
+	.tbd {
 		display: inline-block;
-		padding: 0.15rem 0.5rem;
+		padding: 0.1rem 0.45rem;
 		border-radius: 4px;
-		background: rgba(138, 139, 140, 0.2);
-		color: var(--accent-muted);
-		font-size: 0.7rem;
+		background: rgba(83, 179, 203, 0.15);
+		color: var(--pacific-blue);
+		font-size: 0.75rem;
 		font-weight: 700;
 		letter-spacing: 0.08em;
 		text-transform: uppercase;
 	}
 
-	/* ---- STORY SECTION ---- */
-	.story-section {
-		max-width: min(700px, 85vw);
-		margin: 0 auto 3rem;
-		text-align: center;
+	@media (max-width: 480px) {
+		.tl-time {
+			width: 85px;
+			font-size: 0.9rem;
+		}
+
+		.tl-item {
+			padding: 0.8rem 1rem;
+		}
 	}
 
-	.section-heading {
-		font-size: 1.5rem;
-		font-weight: 700;
-		color: var(--text-strong);
-		text-transform: uppercase;
-		letter-spacing: 0.1em;
+	/* ---- HISTORY ---- */
+	.history {
+		background: var(--surface);
+		border: 1px solid var(--surface-border);
+		border-left: 3px solid var(--tuscan-sun);
+		border-radius: 0 10px 10px 0;
+		padding: 1.75rem 2rem;
+		margin-bottom: 3rem;
+	}
+
+	.history .section-title {
+		text-align: left;
+		font-size: 1.3rem;
 		margin: 0 0 1rem;
+		color: var(--tuscan-sun);
 	}
 
-	.story-section p {
+	.old-logo {
+		float: right;
+		width: 180px;
+		height: auto;
+		margin: 0 0 1rem 1.5rem;
+		border-radius: 8px;
+		padding: 6px;
+		background: #e8e8e8;
+	}
+
+	@media (max-width: 480px) {
+		.old-logo {
+			float: none;
+			display: block;
+			margin: 0 auto 1rem;
+			width: 120px;
+		}
+	}
+
+	.history p {
 		color: var(--text-muted);
-		line-height: 1.7;
+		line-height: 1.75;
 		font-size: 1.05rem;
 		margin: 0.75rem 0;
+		text-align: left;
 	}
 
-	.accent-number {
-		color: var(--accent-primary);
-		font-weight: 700;
-		font-size: 1.15em;
-	}
-
-	.celebration {
-		color: var(--text-strong) !important;
-		font-weight: 600;
-		font-size: 1.1rem !important;
-		margin-top: 1.25rem !important;
-	}
-
-	/* ---- NOTE CALLOUT ---- */
-	.note-callout {
+	/* ---- CALLOUT ---- */
+	.callout {
 		display: flex;
 		align-items: flex-start;
 		gap: 1rem;
-		max-width: min(700px, 85vw);
-		margin: 0 auto 3rem;
 		padding: 1.25rem 1.5rem;
-		background: var(--card-bg);
-		border-left: 3px solid var(--accent-primary);
-		border-radius: 0 8px 8px 0;
+		background: var(--surface);
+		border-left: 3px solid var(--pacific-blue);
+		border-radius: 0 10px 10px 0;
+		margin-bottom: 3rem;
 	}
 
-	.note-callout strong {
-		color: var(--text-strong);
-		display: block;
-		margin-bottom: 0.5rem;
-	}
-
-	.note-callout p {
-		color: var(--text-muted);
-		margin: 0;
-		line-height: 1.6;
-	}
-
-	.note-icon {
+	.callout-icon {
 		flex-shrink: 0;
-		width: 24px;
-		height: 24px;
-		color: var(--accent-primary);
+		width: 22px;
+		height: 22px;
+		color: var(--pacific-blue);
 		margin-top: 2px;
 	}
 
-	/* ---- FOOTER ---- */
-	.site-footer {
-		text-align: center;
-		padding: 1rem 0 2rem;
+	.callout strong {
+		color: var(--frosted-blue);
+		display: block;
+		margin-bottom: 0.4rem;
+		font-size: 1.05rem;
 	}
 
-	.site-footer p {
-		color: var(--accent-muted);
-		font-size: 0.85rem;
-		letter-spacing: 0.05em;
+	.callout p {
+		color: var(--text-muted);
+		margin: 0;
+		line-height: 1.6;
+		font-size: 1.02rem;
+	}
+
+	/* ---- FOOTER ---- */
+	.footer {
+		text-align: center;
+		padding: 1.5rem 0 2.5rem;
+		border-top: 1px solid var(--surface-border);
+	}
+
+	.footer p {
+		color: var(--text-muted);
+		font-size: 0.9rem;
+		letter-spacing: 0.06em;
 		margin: 0;
 	}
 </style>
